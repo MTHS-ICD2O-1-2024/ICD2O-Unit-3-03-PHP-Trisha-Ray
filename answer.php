@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Volume of a Pyramid, with PHP" />
+  <meta name="description" content="Volume of a Sphere, with PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Trisha Ray" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
     sizes="16x16"
     href="./favicon-16x16.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Volume of a Pyramid, with PHP</title>
+  <title>Volume of a Sphere, with PHP</title>
 </head>
 
 <body>
@@ -38,21 +38,19 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Volume of a Pyramid, with PHP</span>
+        <span class="mdl-layout-title">Volume of a Sphere, with PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/pyramid.png" alt="Pyramid Volume" />
+        <img src="./images/volume-of-sphere.png" alt="Sphere Volume" />
       </div>
       <div class="page-content-php">
         <div id="user-info">
           <?php
-          $length = $_GET["length"];
-          $width = $_GET["width"];
-          $height = $_GET["height"];
+          $radius = $_GET["radius"];
           // process
-          $volume = ($length * $width * $height) / 3;
+          $volume = 4/3 * pi() * ($radius * $radius * $radius);
           // output
           echo "<br />";
           echo "Volume is " . $volume . " mm³.";
